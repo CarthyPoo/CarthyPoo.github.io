@@ -1,73 +1,307 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
-  <link rel="stylesheet" type="text/css" href="styles/main.css" media="screen" />
-  <link rel="stylesheet" type="text/css" href="styles/nav.css" media="screen" />
-  <link rel="stylesheet" type="text/css" href="styles/stars.css" media="screen" />
-
-
-  <link rel="icon" href="/images/boba.png" type="image/png">
-  <title>Lawrence's Portfolio</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
-  <script src="https://kit.fontawesome.com/5ab0bed43b.js" crossorigin="anonymous"></script>
-  <script src="animations.js"></script> 
-
+<meta charset="UTF-8">
+<script>(function(){var t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t);})();</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lawrence Porquia — IT Support &amp; Systems Administration</title>
+<meta name="description" content="Lawrence Porquia — IT Support &amp; Systems Administration. SAIT IT Services diploma graduate based in Alberta, Canada.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
+<body>
 
-<body onload="titleMarquee()">
+<div class="deskbar">
+  <div class="deskbar__inner">
+    <span class="deskbar__brand">CAREERS DESK</span>
+    <span class="deskbar__crumb">Queue: IT &amp; Infrastructure <span class="deskbar__sep">/</span> <strong>TICKET-0001</strong></span>
+    <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Toggle dark mode">
+      <svg class="theme-toggle__icon theme-toggle__icon--sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.6M12 18.9v2.6M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M2.5 12h2.6M18.9 12h2.6M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8"/></svg>
+      <svg class="theme-toggle__icon theme-toggle__icon--moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M20 14.5a8 8 0 1 1-9.5-11 6.5 6.5 0 0 0 9.5 11Z"/></svg>
+    </button>
+    <a class="deskbar__cta" href="mailto:lawrence-porquia@hotmail.com">New message ↗</a>
+  </div>
+</div>
 
-  <!-- Navigation Text-->
-  <nav class="navbar navbar-expand-md">
-    <img src="images/image.png" class="intro-pic" alt="Drawing by Alirah">
-    <div class="title">
-      <h1> ローレンス</h1>
-    </div>
-    <div class="collapse navbar-collapse" id="main-navigation">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link" href="https://dsc.bio/carthy"><i class="fa-brands fa-discord"></i></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="https://www.instagram.com/lawrenceporquia"><i class="fa-brands fa-instagram"></i></a>
-        </li>
-       <li class="nav-item">
-          <a class="nav-link" href="https://www.linkedin.com/in/lawrence-porquia-682929285"><i class="fa-brands fa-linkedin"></i></a>
-        </li> 
-        <li class="nav-item">
-          <a class="nav-link" href="https://github.com/CarthyPoo"><i class="fa-brands fa-github"></i></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="https://www.last.fm/user/Carthypoo"><i class="fa-brands fa-lastfm"></i>
-          </a>
-        </li>
-      </ul>
-    </div>
-  </nav>
+<main class="ticket">
 
-  <!-- Main content -->
-  <section class="main-content">
-    <div class="main-paragraph">
-      <p>My name is Lawrence Porquia, an Information Technology Student.
-      <div class="about-me-button">
-        <button type="button" onclick="location.href='https://www.linkedin.com/in/lawrence-porquia-682929285/';" class="btn btn-primary">Connect With Me!</button>
+  <!-- ===== Ticket header ===== -->
+  <section class="ticket__header" aria-label="Ticket summary">
+    <div class="ticket__top">
+      <img class="ticket__avatar" src="images/avatar.jpg" alt="Lawrence Porquia, holding his SAIT diploma at convocation" width="96" height="96">
+      <div class="ticket__top-text">
+        <div class="ticket__id-row">
+          <span class="ticket__id">TICKET-0001</span>
+          <span class="status-pill status-pill--open">
+            <span class="status-dot" aria-hidden="true"></span> Open
+          </span>
+        </div>
+        <h1 class="ticket__subject">Seeking: IT Support &amp; Systems Administration role</h1>
       </div>
-    </div> 
-    <div class="main-pic">
-      <img src='https://i.imgur.com/USq3Bq5.jpg' />
     </div>
-    
+
+    <p class="ticket__tagline">Filed by a SAIT IT Services grad who'd rather fix the problem than talk about fixing the problem.</p>
+
+    <dl class="field-grid">
+      <div class="field">
+        <dt>Requester</dt>
+        <dd>Lawrence Porquia</dd>
+      </div>
+      <div class="field">
+        <dt>Location</dt>
+        <dd>Red Deer, AB — open to Calgary, Vancouver, or relocating internationally</dd>
+      </div>
+      <div class="field">
+        <dt>Priority</dt>
+        <dd><span class="priority priority--high">High — actively applying</span></dd>
+      </div>
+      <div class="field">
+        <dt>Category</dt>
+        <dd>IT Support · Systems Administration · Infrastructure</dd>
+      </div>
+      <div class="field">
+        <dt>Filed</dt>
+        <dd id="filed-age">—</dd>
+      </div>
+      <div class="field">
+        <dt>Assigned to</dt>
+        <dd>Whoever's hiring next <span class="field__wink">(hi 👋)</span></dd>
+      </div>
+    </dl>
+
+    <div class="attachments" aria-label="Attached photos">
+      <span class="attachments__label">Attachments (2)</span>
+      <div class="attachments__row">
+        <figure class="attachment">
+          <img src="images/graduation.jpg" alt="Lawrence Porquia in cap and gown, holding his SAIT diploma" loading="lazy">
+          <figcaption>convocation.jpg</figcaption>
+        </figure>
+        <figure class="attachment">
+          <img src="images/capstone.jpg" alt="Lawrence Porquia presenting his capstone project at SAIT Tech Capcon" loading="lazy">
+          <figcaption>capcon_demo.jpg</figcaption>
+        </figure>
+      </div>
+    </div>
   </section>
 
-  <!--animation-->
-  <link href='https://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
-  <div id='stars'></div>
-  <div id='stars2'></div>
-  <div id='stars3'></div>
+  <!-- ===== Log: Summary ===== -->
+  <section class="entry" aria-labelledby="log-summary">
+    <div class="entry__meta">
+      <span class="entry__index">00</span>
+      <span class="entry__label">SUMMARY</span>
+    </div>
+    <div class="entry__body">
+      <h2 id="log-summary" class="entry__title">Root cause</h2>
+      <p>I graduated from SAIT's Information Technology Services diploma in April 2026 and I'm looking for my first full-time role in IT support, systems administration, or infrastructure. I like the kind of work where something's broken, nobody knows why yet, and it's on you to find out — troubleshooting, deploying, and keeping systems running is genuinely what I enjoy doing, not just what I studied.</p>
+      <p>Before SAIT I spent a summer as an IT Technician for a school district, keeping multiple sites running day to day. During SAIT I ran point on a five-person capstone team for sixteen weeks. I'm currently working outside of IT to stay financially stable while I apply broadly — but the resume below is where my focus actually is.</p>
+    </div>
+  </section>
 
+  <!-- ===== Log: Skills ===== -->
+  <section class="entry" aria-labelledby="log-skills">
+    <div class="entry__meta">
+      <span class="entry__index">01</span>
+      <span class="entry__label">ATTACHMENTS</span>
+    </div>
+    <div class="entry__body">
+      <h2 id="log-skills" class="entry__title">Skills on file</h2>
+
+      <div class="skill-block">
+        <h3 class="skill-block__title"><svg class="skill-block__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="1.5"/><path d="M8 20h8M12 16v4"/></svg>Systems &amp; support</h3>
+        <ul class="tag-list">
+          <li class="tag tag--logo"><img class="tag-logo" src="https://cdn.simpleicons.org/windows" alt="" loading="lazy" onerror="this.remove()">Windows &amp; Windows Server</li>
+          <li class="tag tag--logo"><img class="tag-logo" src="https://cdn.simpleicons.org/ubuntu" alt="" loading="lazy" onerror="this.remove()">Linux (Red Hat, Ubuntu, CentOS, Arch)</li>
+          <li class="tag tag--logo"><img class="tag-logo" src="https://cdn.simpleicons.org/vmware" alt="" loading="lazy" onerror="this.remove()">VMware Workstation</li>
+          <li class="tag">Device imaging &amp; deployment</li>
+          <li class="tag">End-user troubleshooting</li>
+        </ul>
+      </div>
+
+      <div class="skill-block">
+        <h3 class="skill-block__title"><svg class="skill-block__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M7 18a4 4 0 0 1-.6-7.95A5 5 0 0 1 16 8a4.5 4.5 0 0 1 1 8.9"/><path d="M8 18h8"/></svg>Microsoft &amp; ITSM</h3>
+        <ul class="tag-list">
+          <li class="tag tag--logo"><img class="tag-logo" src="https://cdn.simpleicons.org/microsoftazure" alt="" loading="lazy" onerror="this.remove()">Azure</li>
+          <li class="tag">Entra ID</li>
+          <li class="tag tag--logo"><img class="tag-logo" src="https://cdn.simpleicons.org/microsoftteams" alt="" loading="lazy" onerror="this.remove()">Teams / OneDrive / Outlook</li>
+          <li class="tag tag--logo"><img class="tag-logo" src="https://cdn.simpleicons.org/servicenow" alt="" loading="lazy" onerror="this.remove()">ServiceNow</li>
+          <li class="tag">Mojo Helpdesk</li>
+        </ul>
+      </div>
+
+      <div class="skill-block">
+        <h3 class="skill-block__title"><svg class="skill-block__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="5" cy="6" r="2"/><circle cx="19" cy="6" r="2"/><circle cx="12" cy="18" r="2"/><path d="M5 8v3a2 2 0 0 0 2 2h1M19 8v3a2 2 0 0 1-2 2h-1M12 16v-3"/></svg>Networking</h3>
+        <ul class="tag-list">
+          <li class="tag tag--logo"><img class="tag-logo" src="https://cdn.simpleicons.org/cisco" alt="" loading="lazy" onerror="this.remove()">Cisco fundamentals</li>
+          <li class="tag tag--logo"><img class="tag-logo" src="https://cdn.simpleicons.org/cisco" alt="" loading="lazy" onerror="this.remove()">Cisco Meraki</li>
+          <li class="tag">WLC / CAPWAP / AP roaming</li>
+          <li class="tag">WPA2 Enterprise</li>
+          <li class="tag">DNS troubleshooting</li>
+          <li class="tag">Packet Tracer</li>
+        </ul>
+      </div>
+
+      <div class="skill-block">
+        <h3 class="skill-block__title"><svg class="skill-block__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="1.5"/><path d="m7 9 3 3-3 3M13 15h4"/></svg>Scripting, cloud &amp; security exposure</h3>
+        <ul class="tag-list">
+          <li class="tag tag--logo"><img class="tag-logo" src="https://cdn.simpleicons.org/python" alt="" loading="lazy" onerror="this.remove()">Python</li>
+          <li class="tag">SQL</li>
+          <li class="tag tag--logo"><img class="tag-logo" src="https://cdn.simpleicons.org/html5" alt="" loading="lazy" onerror="this.remove()">HTML / CSS / JS</li>
+          <li class="tag tag--logo"><img class="tag-logo" src="https://cdn.simpleicons.org/githubactions" alt="" loading="lazy" onerror="this.remove()">GitHub Actions</li>
+          <li class="tag tag--logo"><img class="tag-logo" src="https://cdn.simpleicons.org/docker" alt="" loading="lazy" onerror="this.remove()">Docker</li>
+          <li class="tag tag--logo"><img class="tag-logo" src="https://cdn.simpleicons.org/microsoftazure" alt="" loading="lazy" onerror="this.remove()">Azure App Services &amp; SQL</li>
+          <li class="tag">TryHackMe / CTFs</li>
+          <li class="tag">OS hardening basics</li>
+        </ul>
+      </div>
+
+      <p class="skill-note">Networking coursework covers the CCNA curriculum; exam not yet written. Strongest day-to-day in systems administration, troubleshooting, and end-user support.</p>
+    </div>
+  </section>
+
+  <!-- ===== Log: Work experience ===== -->
+  <section class="entry" aria-labelledby="log-work">
+    <div class="entry__meta">
+      <span class="entry__index">02</span>
+      <span class="entry__label">WORK LOG</span>
+    </div>
+    <div class="entry__body">
+      <div class="entry__title-row">
+        <h2 id="log-work" class="entry__title">IT Technician — Red Deer Catholic Regional Schools</h2>
+        <img class="entry__org-logo" src="images/logo_rdcrs.png" alt="Red Deer Catholic Regional Schools logo" loading="lazy">
+      </div>
+      <p class="entry__dates">May 2025 – July 2025</p>
+      <ul class="log-list">
+        <li>Supported IT operations across multiple school sites, handling hardware, software, and network issues as they came in.</li>
+        <li>Imaged and deployed devices for staff and students ahead of the school year.</li>
+        <li>Assisted with infrastructure upgrades alongside the district's IT team.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ===== Log: Capstone project ===== -->
+  <section class="entry entry--resolution" aria-labelledby="log-project">
+    <div class="entry__meta">
+      <span class="entry__index">03</span>
+      <span class="entry__label">RESOLUTION</span>
+    </div>
+    <div class="entry__body">
+      <div class="entry__title-row">
+        <h2 id="log-project" class="entry__title">cart.ly — SAIT capstone project</h2>
+        <a class="repo-link" href="https://github.com/CarthyPoo" target="_blank" rel="noopener">View repos ↗</a>
+      </div>
+      <p class="entry__dates">Project Manager · 16-week capstone, January – April 2026 · Presented at SAIT Tech Capcon 2026</p>
+      <p>Led a five-person team building cart.ly from planning through delivery — owning timelines, sprint planning, and task assignment using a hybrid Scrum/Kanban process. This was as much a lesson in coordinating people as it was in shipping code.</p>
+
+      <figure class="entry__photo">
+        <img src="images/capstone.jpg" alt="Lawrence Porquia explaining cart.ly to attendees at SAIT Tech Capcon" loading="lazy">
+        <figcaption>Walking through cart.ly at SAIT Tech Capcon 2026</figcaption>
+      </figure>
+
+      <ul class="tag-list tag-list--stack">
+        <li class="tag tag--stack tag--logo"><img class="tag-logo" src="https://cdn.simpleicons.org/python" alt="" loading="lazy" onerror="this.remove()">Python</li>
+        <li class="tag tag--stack tag--logo"><img class="tag-logo" src="https://cdn.simpleicons.org/javascript" alt="" loading="lazy" onerror="this.remove()">JavaScript</li>
+        <li class="tag tag--stack tag--logo"><img class="tag-logo" src="https://cdn.simpleicons.org/html5" alt="" loading="lazy" onerror="this.remove()">HTML/CSS</li>
+        <li class="tag tag--stack tag--logo"><img class="tag-logo" src="https://cdn.simpleicons.org/mysql" alt="" loading="lazy" onerror="this.remove()">MySQL</li>
+        <li class="tag tag--stack tag--logo"><img class="tag-logo" src="https://cdn.simpleicons.org/docker" alt="" loading="lazy" onerror="this.remove()">Docker</li>
+        <li class="tag tag--stack tag--logo"><img class="tag-logo" src="https://cdn.simpleicons.org/microsoftazure" alt="" loading="lazy" onerror="this.remove()">Microsoft Azure</li>
+        <li class="tag tag--stack tag--logo"><img class="tag-logo" src="https://cdn.simpleicons.org/github" alt="" loading="lazy" onerror="this.remove()">GitHub</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ===== Log: Education ===== -->
+  <section class="entry" aria-labelledby="log-education">
+    <div class="entry__meta">
+      <span class="entry__index">04</span>
+      <span class="entry__label">CERTIFICATION</span>
+    </div>
+    <div class="entry__body">
+      <h2 id="log-education" class="entry__title">Information Technology Services Diploma — SAIT</h2>
+      <p class="entry__dates">Southern Alberta Institute of Technology, Calgary · School for Advanced Digital Technology · 2024 – April 2026</p>
+      <p>A two-year, 60-credit diploma (20 courses) delivered in a blended format, covering IT fundamentals, cloud services, information security, and emerging technology. Hands-on labs across hardware, networking, virtualization, scripting, and cloud platforms, capped off with a second-year capstone project.</p>
+      <ul class="log-list">
+        <li>Coursework spanning systems administration, networking, cloud, and security fundamentals.</li>
+        <li>SAIT's most recent graduate survey put employment for this program at 80%, with an average starting salary around $51,321.</li>
+      </ul>
+
+      <figure class="entry__photo entry__photo--portrait">
+        <img src="images/graduation.jpg" alt="Lawrence Porquia in cap and gown holding his SAIT diploma, with the Calgary skyline behind him" loading="lazy">
+        <figcaption>SAIT convocation, April 2026</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ===== Log: Singapore exchange ===== -->
+  <section class="entry" aria-labelledby="log-exchange">
+    <div class="entry__meta">
+      <span class="entry__index">05</span>
+      <span class="entry__label">FIELD WORK</span>
+    </div>
+    <div class="entry__body">
+      <h2 id="log-exchange" class="entry__title">Study-abroad exchange — Singapore</h2>
+      <p class="entry__dates">Institute of Technical Education (ITE), Info-Communication Technology · 27 Jul – 16 Aug 2025</p>
+      <p>Represented SAIT on a three-week academic and cultural exchange through the Global Education Network — a partnership between SAIT, Box Hill Institute (Australia), ITE (Singapore), and Kirkwood Community College (USA) — working through programming, web development, cybersecurity, and digital transformation alongside ITE's ICT program.</p>
+      <ul class="log-list">
+        <li>Toured AWS, IBM, and Hyundai to see enterprise IT and digital transformation in practice.</li>
+        <li>Took part in service learning and cross-cultural collaboration with the host program.</li>
+        <li>Came back with a genuinely global perspective on how IT teams operate outside Alberta.</li>
+      </ul>
+
+      <figure class="entry__photo entry__photo--portrait">
+        <img src="images/cert_singapore.jpg" alt="Certificate of Participation, Global Education Network Study Exchange to Institute of Technical Education, Singapore, awarded to Lawrence Porquia" loading="lazy">
+        <figcaption>gen_certificate.jpg</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ===== Log: Certifications ===== -->
+  <section class="entry" aria-labelledby="log-certs">
+    <div class="entry__meta">
+      <span class="entry__index">06</span>
+      <span class="entry__label">CERTIFICATIONS</span>
+    </div>
+    <div class="entry__body">
+      <h2 id="log-certs" class="entry__title">Cisco Networking Academy — CCNA track</h2>
+      <p>Completed both courses in SAIT's CCNA track through the Cisco Networking Academy. Official CCNA certification exam not yet written.</p>
+
+      <div class="cert-grid">
+        <figure class="cert-card">
+          <img src="images/cert_ccna1.jpg" alt="Certificate: CCNA Introduction to Networks, awarded to Lawrence Porquia, Southern Alberta Institute of Technology" loading="lazy">
+          <figcaption>
+            <span class="cert-card__title">CCNA: Introduction to Networks</span>
+            <span class="cert-card__meta">SAIT · Cisco Networking Academy · Dec 13, 2024</span>
+          </figcaption>
+        </figure>
+        <figure class="cert-card">
+          <img src="images/cert_ccna2.jpg" alt="Certificate: CCNA Enterprise Networking, Security, and Automation, awarded to Lawrence Porquia, Southern Alberta Institute of Technology" loading="lazy">
+          <figcaption>
+            <span class="cert-card__title">CCNA: Enterprise Networking, Security &amp; Automation</span>
+            <span class="cert-card__meta">SAIT · Cisco Networking Academy · Jan 2, 2026</span>
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Escalate / contact ===== -->
+  <section class="escalate" aria-labelledby="escalate-title">
+    <h2 id="escalate-title" class="escalate__title">Escalate this ticket</h2>
+    <p class="escalate__sub">Reach out directly — I respond fast, and I'm not precious about the channel.</p>
+    <div class="escalate__actions">
+      <a class="btn btn--primary" href="mailto:lawrence-porquia@hotmail.com">Email me</a>
+      <a class="btn" href="https://www.linkedin.com/in/lawrence-porquia-682929285" target="_blank" rel="noopener">LinkedIn ↗</a>
+      <a class="btn" href="https://github.com/CarthyPoo" target="_blank" rel="noopener">GitHub ↗</a>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>TICKET-0001 · status: open · this page redeploys on every push</p>
+  </footer>
+
+</main>
+
+<script src="script.js"></script>
 </body>
-
 </html>
