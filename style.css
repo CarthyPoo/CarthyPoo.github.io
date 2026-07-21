@@ -486,6 +486,10 @@ button:focus-visible {
   max-width: 220px;
 }
 
+.entry__photo--wide {
+  max-width: 100%;
+}
+
 .cert-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
